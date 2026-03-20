@@ -1,0 +1,79 @@
+/* ─── Upload Zone ─── */
+
+.upload-zone {
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-zone:hover {
+  transform: translateY(-2px);
+}
+
+.upload-zone.has-file {
+  border-style: solid;
+}
+
+.upload-zone.dragging {
+  transform: scale(1.01);
+}
+
+.upload-zone-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.upload-zone-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--paper);
+  transition: color 0.2s;
+}
+
+.upload-zone-hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.upload-zone-filename {
+  font-size: 0.8rem;
+  color: var(--paper);
+  font-family: 'DM Mono', monospace;
+  word-break: break-all;
+  margin-top: 0.4rem;
+}
+
+.upload-zone-filesize {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.upload-zone-types {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.upload-type-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.06em;
+}

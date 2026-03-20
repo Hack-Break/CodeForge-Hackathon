@@ -1,0 +1,34 @@
+services:
+
+  # ── NeuralPath v3 — FastAPI backend + React frontend ────────────
+  api:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8000:8000"       # App:   http://localhost:8000
+                          # Docs:  http://localhost:8000/api/docs
+    environment:
+      GROQ_API_KEY:       ${GROQ_API_KEY}
+      GAP_SKIP_THRESHOLD: ${GAP_SKIP_THRESHOLD:-0.10}
+      GAP_FAST_THRESHOLD: ${GAP_FAST_THRESHOLD:-0.30}
+      BKT_SLIP_FACTOR:    ${BKT_SLIP_FACTOR:-0.85}
+      # Tell HuggingFace where to write model weights inside the container
+      HF_HOME:            /root/.cache/huggingface
+    env_file:
+      - .env
+    volumes:
+      # Persist HuggingFace BERT model weights across rebuilds
+      # so they are only downloaded once (~400 MB)
+      - hf_cache:/root/.cache/huggingface
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      start_period: 60s
+      retries: 3
+
+# Named volume — survives docker-compose down, removed only with:
+#   docker-compose down -v
+volumes:
+  hf_cache:

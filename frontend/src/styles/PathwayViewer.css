@@ -1,0 +1,161 @@
+/* ─── Pathway Viewer ─── */
+
+.pathway-viewer {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+}
+
+.pathway-viewer-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 0.3rem;
+}
+
+.pathway-viewer-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 1.5rem;
+}
+
+.pathway-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ─── Module Row ─── */
+.module-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, transform 0.18s;
+}
+
+.module-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(2px);
+}
+
+.module-row.selected {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.module-row.action-skip {
+  opacity: 0.55;
+}
+
+.module-row.action-skip:hover {
+  opacity: 0.75;
+}
+
+/* Step number badge */
+.module-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Module content */
+.module-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.module-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.module-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--paper);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.module-name.skip {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.action-badge {
+  font-size: 0.62rem;
+  padding: 2px 9px;
+  border-radius: 100px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* Progress bar */
+.module-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+  overflow: hidden;
+  max-width: 280px;
+}
+
+.module-progress-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Meta right */
+.module-meta-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.module-hours {
+  font-size: 0.8rem;
+  font-family: 'DM Mono', monospace;
+  font-weight: 600;
+}
+
+.module-pct {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  margin-top: 2px;
+}
+
+/* ─── v2 additions ─── */
+.module-saved {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem; color: #c8f53c; margin-top: 2px;
+}
+.module-conf {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem; color: rgba(245,242,235,0.3); margin-top: 1px;
+}
+.diff-badge {
+  font-size: 0.58rem; font-family: 'DM Mono', monospace;
+  padding: 1px 6px; border-radius: 4px;
+  background: rgba(255,255,255,0.05); color: rgba(245,242,235,0.4);
+  flex-shrink: 0;
+}

@@ -1,0 +1,58 @@
+/* ─── Navbar ─── */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 1rem;
+}
+
+.navbar-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem; font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--lime);
+  white-space: nowrap;
+}
+.navbar-logo span { color: var(--paper); }
+
+/* Mode buttons */
+.navbar-modes {
+  display: flex; gap: 0.4rem;
+}
+.mode-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: rgba(245,242,235,0.5);
+  font-family: 'Cabinet Grotesk', 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.mode-btn:hover {
+  border-color: rgba(255,255,255,0.25);
+  color: var(--paper);
+}
+.mode-btn.active {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--ink);
+}
+
+.navbar-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem; letter-spacing: 0.1em;
+  color: rgba(245,242,235,0.3);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar-tag { display: none; }
+  .navbar { padding: 0.8rem 1.2rem; }
+  .mode-btn { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
+}
