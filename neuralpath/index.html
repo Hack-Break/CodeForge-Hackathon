@@ -1,38 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NeuralPath — AI-Adaptive Onboarding Engine</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- Base -->
-  <link rel="stylesheet" href="src/css/variables.css">
-  <link rel="stylesheet" href="src/css/base.css">
-  <link rel="stylesheet" href="src/css/animations.css">
-  <link rel="stylesheet" href="src/css/cursor.css">
-  <link rel="stylesheet" href="src/css/buttons.css">
+  <link rel="stylesheet" href="src/css/variables.css" />
+  <link rel="stylesheet" href="src/css/base.css" />
+  <link rel="stylesheet" href="src/css/animations.css" />
+  <link rel="stylesheet" href="src/css/cursor.css" />
+  <link rel="stylesheet" href="src/css/buttons.css" />
 
   <!-- Sections -->
-  <link rel="stylesheet" href="src/css/nav.css">
-  <link rel="stylesheet" href="src/css/hero.css">
+  <link rel="stylesheet" href="src/css/nav.css" />
+  <link rel="stylesheet" href="src/css/hero.css" />
 
   <!-- Components -->
-  <link rel="stylesheet" href="src/css/components/steps.css">
-  <link rel="stylesheet" href="src/css/components/flow.css">
-  <link rel="stylesheet" href="src/css/components/upload.css">
-  <link rel="stylesheet" href="src/css/components/tech.css">
-  <link rel="stylesheet" href="src/css/components/metrics.css">
-  <link rel="stylesheet" href="src/css/components/algo.css">
-  <link rel="stylesheet" href="src/css/components/cta-footer.css">
+  <link rel="stylesheet" href="src/css/components/steps.css" />
+  <link rel="stylesheet" href="src/css/components/flow.css" />
+  <link rel="stylesheet" href="src/css/components/upload.css" />
+  <link rel="stylesheet" href="src/css/components/tech.css" />
+  <link rel="stylesheet" href="src/css/components/metrics.css" />
+  <link rel="stylesheet" href="src/css/components/algo.css" />
+  <link rel="stylesheet" href="src/css/components/cta-footer.css" />
 
   <!-- Responsive (always last) -->
-  <link rel="stylesheet" href="src/css/responsive.css">
+  <link rel="stylesheet" href="src/css/responsive.css" />
 </head>
-<body>
 
+<body>
   <!-- ─── CURSOR ─── -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursor-ring"></div>
@@ -46,7 +49,7 @@
       <a href="#metrics">Metrics</a>
       <a href="#algo">Algorithm</a>
     </div>
-    <button class="nav-cta">Try Demo ↗</button>
+    <a href="demo.html" class="nav-cta">Try Demo ↗</a>
   </nav>
 
   <!-- ─── HERO ─── -->
@@ -59,19 +62,19 @@
     <div class="hero-tag">Hackathon 2025 — AI Onboarding Engine</div>
 
     <h1>
-      Adaptive<br>
-      <span class="accent">Learning</span><br>
+      Adaptive<br />
+      <span class="accent">Learning</span><br />
       <span class="stroke">Pathways</span>
     </h1>
 
     <p class="hero-desc">
-      Stop one-size-fits-all onboarding. NeuralPath parses your resume, maps your
-      skill gaps against any job description, and generates a personalized training
-      roadmap in seconds.
+      Stop one-size-fits-all onboarding. NeuralPath parses your resume, maps
+      your skill gaps against any job description, and generates a
+      personalized training roadmap in seconds.
     </p>
 
     <div class="hero-actions">
-      <button class="btn-primary">Launch App ↗</button>
+<a href="demo.html" class="btn-primary">Launch App ↗</a>
       <button class="btn-secondary">Watch Demo →</button>
     </div>
 
@@ -84,37 +87,78 @@
           <span class="skill-name">System Design</span>
           <span class="skill-pct">32%</span>
         </div>
-        <div class="skill-bar"><div class="skill-fill" style="width:32%;background:var(--coral)"></div></div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 32%; background: var(--coral)"></div>
+        </div>
         <div class="skill-row">
           <span class="skill-name">TypeScript</span>
           <span class="skill-pct">71%</span>
         </div>
-        <div class="skill-bar"><div class="skill-fill" style="width:71%;background:var(--lime)"></div></div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 71%; background: var(--lime)"></div>
+        </div>
         <div class="skill-row">
           <span class="skill-name">AWS / Cloud</span>
           <span class="skill-pct">48%</span>
         </div>
-        <div class="skill-bar"><div class="skill-fill" style="width:48%;background:#a99fff"></div></div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 48%; background: #a99fff"></div>
+        </div>
       </div>
 
       <div class="hcard hcard-2">
         <div class="hcard-label">Generated Pathway</div>
         <div class="hcard-title">3 modules · 18h estimated</div>
-        <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:0.75rem">
-            <span style="color:var(--lime)">✓</span>
-            <span style="opacity:0.7">AWS Fundamentals</span>
-            <span style="margin-left:auto;font-family:'DM Mono',monospace;font-size:0.65rem;opacity:0.4">6h</span>
+        <div style="
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 10px;
+            ">
+          <div style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.75rem;
+              ">
+            <span style="color: var(--lime)">✓</span>
+            <span style="opacity: 0.7">AWS Fundamentals</span>
+            <span style="
+                  margin-left: auto;
+                  font-family: &quot;DM Mono&quot;, monospace;
+                  font-size: 0.65rem;
+                  opacity: 0.4;
+                ">6h</span>
           </div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:0.75rem">
-            <span style="color:#a99fff">→</span>
-            <span style="opacity:0.9">System Design 101</span>
-            <span style="margin-left:auto;font-family:'DM Mono',monospace;font-size:0.65rem;opacity:0.4">8h</span>
+          <div style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.75rem;
+              ">
+            <span style="color: #a99fff">→</span>
+            <span style="opacity: 0.9">System Design 101</span>
+            <span style="
+                  margin-left: auto;
+                  font-family: &quot;DM Mono&quot;, monospace;
+                  font-size: 0.65rem;
+                  opacity: 0.4;
+                ">8h</span>
           </div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:0.75rem">
-            <span style="opacity:0.3">○</span>
-            <span style="opacity:0.4">Distributed Systems</span>
-            <span style="margin-left:auto;font-family:'DM Mono',monospace;font-size:0.65rem;opacity:0.4">4h</span>
+          <div style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.75rem;
+              ">
+            <span style="opacity: 0.3">○</span>
+            <span style="opacity: 0.4">Distributed Systems</span>
+            <span style="
+                  margin-left: auto;
+                  font-family: &quot;DM Mono&quot;, monospace;
+                  font-size: 0.65rem;
+                  opacity: 0.4;
+                ">4h</span>
           </div>
         </div>
       </div>
@@ -122,9 +166,15 @@
       <div class="hcard hcard-3">
         <div class="hcard-label">Reasoning Trace</div>
         <div class="hcard-title">Why this path?</div>
-        <p style="font-size:0.72rem;color:rgba(255,255,255,0.5);line-height:1.5;margin-top:6px">
-          "Resume shows 3yr React experience. JD requires distributed systems knowledge.
-          Skipping 4 basic modules, accelerating to advanced cloud track."
+        <p style="
+              font-size: 0.72rem;
+              color: rgba(255, 255, 255, 0.5);
+              line-height: 1.5;
+              margin-top: 6px;
+            ">
+          "Resume shows 3yr React experience. JD requires distributed systems
+          knowledge. Skipping 4 basic modules, accelerating to advanced cloud
+          track."
         </p>
       </div>
     </div>
@@ -148,31 +198,49 @@
   <!-- ─── HOW IT WORKS ─── -->
   <section id="how">
     <div class="section-tag">01 — Process</div>
-    <h2 class="section-h reveal">How <span style="color:var(--lime)">NeuralPath</span><br>Works</h2>
+    <h2 class="section-h reveal">
+      How <span style="color: var(--lime)">NeuralPath</span><br />Works
+    </h2>
     <div class="steps-wrap">
       <div class="step reveal reveal-delay-1">
         <div class="step-num">01</div>
         <div class="step-icon violet">📄</div>
         <h3>Intelligent Parsing</h3>
-        <p>Upload a resume (PDF/DOCX) and a job description. Claude Sonnet 4 extracts structured skills, experience levels, and role requirements using O*NET taxonomy.</p>
+        <p>
+          Upload a resume (PDF/DOCX) and a job description. Claude Sonnet 4
+          extracts structured skills, experience levels, and role requirements
+          using O*NET taxonomy.
+        </p>
       </div>
       <div class="step reveal reveal-delay-2">
         <div class="step-num">02</div>
         <div class="step-icon lime">🧠</div>
         <h3>Skill Gap Mapping</h3>
-        <p>A graph-based Knowledge Tracing algorithm computes the delta between current competencies and required role benchmarks, weighted by prerequisite dependencies.</p>
+        <p>
+          A graph-based Knowledge Tracing algorithm computes the delta between
+          current competencies and required role benchmarks, weighted by
+          prerequisite dependencies.
+        </p>
       </div>
       <div class="step reveal reveal-delay-3">
         <div class="step-num">03</div>
         <div class="step-icon coral">⚡</div>
         <h3>Adaptive Pathway Generation</h3>
-        <p>The engine dynamically constructs a minimal-time learning sequence — skipping known concepts, fast-tracking near-competent areas, prioritizing critical gaps.</p>
+        <p>
+          The engine dynamically constructs a minimal-time learning sequence —
+          skipping known concepts, fast-tracking near-competent areas,
+          prioritizing critical gaps.
+        </p>
       </div>
       <div class="step reveal">
         <div class="step-num">04</div>
         <div class="step-icon sky">🔍</div>
         <h3>Reasoning Trace</h3>
-        <p>Every recommendation is accompanied by a transparent chain-of-thought: why each module was included, skipped, or accelerated — grounded in the course catalog only.</p>
+        <p>
+          Every recommendation is accompanied by a transparent
+          chain-of-thought: why each module was included, skipped, or
+          accelerated — grounded in the course catalog only.
+        </p>
       </div>
     </div>
   </section>
@@ -181,10 +249,14 @@
   <section class="flow-section" id="flow">
     <div class="flow-inner">
       <div class="section-tag">02 — Architecture</div>
-      <h2 class="section-h reveal">System <span style="color:var(--lime)">Data Flow</span></h2>
+      <h2 class="section-h reveal">
+        System <span style="color: var(--lime)">Data Flow</span>
+      </h2>
       <div class="flow-diagram reveal">
         <div class="flow-node">
-          <div class="flow-box v"><span class="icon">📄</span>Resume + JD</div>
+          <div class="flow-box v">
+            <span class="icon">📄</span>Resume + JD
+          </div>
           <div class="flow-label">Input</div>
         </div>
         <div class="flow-arrow"></div>
@@ -194,17 +266,23 @@
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
-          <div class="flow-box c"><span class="icon">🔢</span>Skill Vectors</div>
+          <div class="flow-box c">
+            <span class="icon">🔢</span>Skill Vectors
+          </div>
           <div class="flow-label">Embeddings</div>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
-          <div class="flow-box l"><span class="icon">📊</span>Gap Analysis</div>
+          <div class="flow-box l">
+            <span class="icon">📊</span>Gap Analysis
+          </div>
           <div class="flow-label">KT Algorithm</div>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
-          <div class="flow-box s"><span class="icon">🗺️</span>Pathway Map</div>
+          <div class="flow-box s">
+            <span class="icon">🗺️</span>Pathway Map
+          </div>
           <div class="flow-label">Graph Traversal</div>
         </div>
         <div class="flow-arrow"></div>
@@ -219,9 +297,18 @@
   <!-- ─── UPLOAD DEMO ─── -->
   <section class="upload-section" id="demo">
     <div class="section-tag">03 — Interface</div>
-    <h2 class="section-h reveal">Upload &amp; <span style="color:var(--lime)">Visualize</span></h2>
-    <p style="color:rgba(245,242,235,0.4);max-width:500px;margin-top:0.5rem;font-size:0.95rem;line-height:1.6">
-      Drop your documents. Get a personalized training roadmap in under 5 seconds.
+    <h2 class="section-h reveal">
+      Upload &amp; <span style="color: var(--lime)">Visualize</span>
+    </h2>
+    <p style="
+          color: rgba(245, 242, 235, 0.4);
+          max-width: 500px;
+          margin-top: 0.5rem;
+          font-size: 0.95rem;
+          line-height: 1.6;
+        ">
+      Drop your documents. Get a personalized training roadmap in under 5
+      seconds.
     </p>
     <div class="upload-wrap">
       <div class="upload-zone reveal reveal-delay-1">
@@ -235,68 +322,94 @@
       <div class="upload-zone reveal reveal-delay-2">
         <span class="upload-icon">💼</span>
         <h4>Job Description</h4>
-        <p>Paste the JD text or upload the document to analyze role requirements.</p>
+        <p>
+          Paste the JD text or upload the document to analyze role
+          requirements.
+        </p>
         <div class="upload-types">
           <span>PDF</span><span>DOCX</span><span>TEXT</span>
         </div>
       </div>
       <div class="pathway-card reveal">
         <h4>Generated Pathway — Senior Software Engineer (Full-Stack)</h4>
-        <p>Based on resume analysis · 5 modules selected · 3 skipped · Est. 24h total</p>
+        <p>
+          Based on resume analysis · 5 modules selected · 3 skipped · Est. 24h
+          total
+        </p>
         <div class="pathway-modules">
           <div class="module-row">
             <div class="mod-status skip">✓</div>
             <div class="mod-content">
               <div class="mod-name">HTML/CSS Fundamentals</div>
-              <div class="mod-meta">SKIPPED — 4yr proficiency detected in resume</div>
+              <div class="mod-meta">
+                SKIPPED — 4yr proficiency detected in resume
+              </div>
             </div>
             <div class="mod-bar-wrap">
               <div class="mod-time">0h</div>
-              <div class="mod-bar"><div class="mod-fill" style="width:100%;background:var(--lime)"></div></div>
+              <div class="mod-bar">
+                <div class="mod-fill" style="width: 100%; background: var(--lime)"></div>
+              </div>
             </div>
           </div>
           <div class="module-row">
             <div class="mod-status req">1</div>
             <div class="mod-content">
               <div class="mod-name">AWS Cloud Practitioner</div>
-              <div class="mod-meta">REQUIRED — Critical gap: 28% proficiency vs 80% required</div>
+              <div class="mod-meta">
+                REQUIRED — Critical gap: 28% proficiency vs 80% required
+              </div>
             </div>
             <div class="mod-bar-wrap">
               <div class="mod-time">8h</div>
-              <div class="mod-bar"><div class="mod-fill" style="width:28%;background:#a99fff"></div></div>
+              <div class="mod-bar">
+                <div class="mod-fill" style="width: 28%; background: #a99fff"></div>
+              </div>
             </div>
           </div>
           <div class="module-row">
             <div class="mod-status fast">→</div>
             <div class="mod-content">
               <div class="mod-name">TypeScript Advanced Patterns</div>
-              <div class="mod-meta">FAST-TRACK — 71% proficiency, accelerated module</div>
+              <div class="mod-meta">
+                FAST-TRACK — 71% proficiency, accelerated module
+              </div>
             </div>
             <div class="mod-bar-wrap">
               <div class="mod-time">4h</div>
-              <div class="mod-bar"><div class="mod-fill" style="width:71%;background:#ffc83d"></div></div>
+              <div class="mod-bar">
+                <div class="mod-fill" style="width: 71%; background: #ffc83d"></div>
+              </div>
             </div>
           </div>
           <div class="module-row">
             <div class="mod-status req">2</div>
             <div class="mod-content">
               <div class="mod-name">System Design Fundamentals</div>
-              <div class="mod-meta">REQUIRED — No prior experience detected</div>
+              <div class="mod-meta">
+                REQUIRED — No prior experience detected
+              </div>
             </div>
             <div class="mod-bar-wrap">
               <div class="mod-time">10h</div>
-              <div class="mod-bar"><div class="mod-fill" style="width:10%;background:#a99fff"></div></div>
+              <div class="mod-bar">
+                <div class="mod-fill" style="width: 10%; background: #a99fff"></div>
+              </div>
             </div>
           </div>
           <div class="module-row">
             <div class="mod-status req">3</div>
             <div class="mod-content">
               <div class="mod-name">CI/CD &amp; DevOps Practices</div>
-              <div class="mod-meta">REQUIRED — 35% proficiency vs 70% required</div>
+              <div class="mod-meta">
+                REQUIRED — 35% proficiency vs 70% required
+              </div>
             </div>
             <div class="mod-bar-wrap">
               <div class="mod-time">6h</div>
-              <div class="mod-bar"><div class="mod-fill" style="width:35%;background:#a99fff"></div></div>
+              <div class="mod-bar">
+                <div class="mod-fill" style="width: 35%; background: #a99fff"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -307,22 +420,30 @@
   <!-- ─── TECH STACK ─── -->
   <section class="tech-section" id="tech">
     <div class="section-tag">04 — Stack</div>
-    <h2 class="section-h reveal">Tech Stack &amp; <span style="color:var(--lime)">Models</span></h2>
+    <h2 class="section-h reveal">
+      Tech Stack &amp; <span style="color: var(--lime)">Models</span>
+    </h2>
     <div class="tech-grid reveal">
       <div class="tech-item">
         <span class="t-icon">🤖</span>
         <div class="t-name">Claude Sonnet 4</div>
-        <div class="t-desc">Skill extraction, gap reasoning &amp; pathway narration</div>
+        <div class="t-desc">
+          Skill extraction, gap reasoning &amp; pathway narration
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">🔢</span>
         <div class="t-name">text-embedding-3-small</div>
-        <div class="t-desc">Semantic skill similarity via cosine distance</div>
+        <div class="t-desc">
+          Semantic skill similarity via cosine distance
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">⚛️</span>
         <div class="t-name">React + Vite</div>
-        <div class="t-desc">Frontend UI with real-time pathway visualization</div>
+        <div class="t-desc">
+          Frontend UI with real-time pathway visualization
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">🐍</span>
@@ -332,22 +453,30 @@
       <div class="tech-item">
         <span class="t-icon">🗃️</span>
         <div class="t-name">O*NET Database</div>
-        <div class="t-desc">28,000+ standardized occupation skill taxonomies</div>
+        <div class="t-desc">
+          28,000+ standardized occupation skill taxonomies
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">📊</span>
         <div class="t-name">NetworkX</div>
-        <div class="t-desc">Prerequisite skill graph construction &amp; traversal</div>
+        <div class="t-desc">
+          Prerequisite skill graph construction &amp; traversal
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">🐋</span>
         <div class="t-name">Docker</div>
-        <div class="t-desc">Containerized deployment with reproducible builds</div>
+        <div class="t-desc">
+          Containerized deployment with reproducible builds
+        </div>
       </div>
       <div class="tech-item">
         <span class="t-icon">📦</span>
         <div class="t-name">pgvector</div>
-        <div class="t-desc">PostgreSQL vector storage for skill embeddings</div>
+        <div class="t-desc">
+          PostgreSQL vector storage for skill embeddings
+        </div>
       </div>
     </div>
   </section>
@@ -355,23 +484,33 @@
   <!-- ─── METRICS ─── -->
   <section class="metrics-section" id="metrics">
     <div class="section-tag">05 — Validation</div>
-    <h2 class="section-h reveal">Performance <span style="color:var(--lime)">Metrics</span></h2>
+    <h2 class="section-h reveal">
+      Performance <span style="color: var(--lime)">Metrics</span>
+    </h2>
     <div class="metrics-grid reveal">
       <div class="metric-card">
         <div class="metric-big lime">94.2%</div>
-        <div class="metric-label">Skill extraction accuracy on Kaggle Resume Dataset (n=2,000)</div>
+        <div class="metric-label">
+          Skill extraction accuracy on Kaggle Resume Dataset (n=2,000)
+        </div>
       </div>
       <div class="metric-card">
         <div class="metric-big violet">73%</div>
-        <div class="metric-label">Average reduction in redundant training time per hire</div>
+        <div class="metric-label">
+          Average reduction in redundant training time per hire
+        </div>
       </div>
       <div class="metric-card">
         <div class="metric-big coral">0%</div>
-        <div class="metric-label">Hallucination rate — all modules grounded in catalog</div>
+        <div class="metric-label">
+          Hallucination rate — all modules grounded in catalog
+        </div>
       </div>
       <div class="metric-card">
         <div class="metric-big sky">2.4×</div>
-        <div class="metric-label">Faster time to role competency vs. static curriculum</div>
+        <div class="metric-label">
+          Faster time to role competency vs. static curriculum
+        </div>
       </div>
     </div>
   </section>
@@ -380,45 +519,72 @@
   <section class="algo-section" id="algo">
     <div class="algo-inner">
       <div class="section-tag">06 — Core Logic</div>
-      <h2 class="section-h reveal">Adaptive <span style="color:var(--lime)">Pathing</span> Algorithm</h2>
+      <h2 class="section-h reveal">
+        Adaptive <span style="color: var(--lime)">Pathing</span> Algorithm
+      </h2>
       <div class="algo-grid">
         <div class="algo-card reveal reveal-delay-1">
           <h3>Knowledge Tracing Model</h3>
           <ul>
             <li>Skills modeled as nodes in a directed prerequisite graph</li>
-            <li>Each skill has a proficiency score <strong>[0–1]</strong> extracted from resume signals</li>
-            <li>Gap score = max(0, role_requirement − current_proficiency)</li>
-            <li>Bayesian Knowledge Tracing (BKT) priors applied per skill domain</li>
-            <li>Topological sort ensures prerequisites are always completed first</li>
+            <li>
+              Each skill has a proficiency score
+              <strong>[0–1]</strong> extracted from resume signals
+            </li>
+            <li>
+              Gap score = max(0, role_requirement − current_proficiency)
+            </li>
+            <li>
+              Bayesian Knowledge Tracing (BKT) priors applied per skill domain
+            </li>
+            <li>
+              Topological sort ensures prerequisites are always completed
+              first
+            </li>
           </ul>
           <div class="code-block">
-<span class="kw">def</span> <span class="fn">compute_gap_score</span>(skill):
-  gap = skill.required - skill.current
-  <span class="kw">if</span> gap &lt;= <span class="str">0.1</span>:  <span class="cm"># within 10% → skip</span>
-    <span class="kw">return</span> <span class="str">"SKIP"</span>
-  <span class="kw">elif</span> gap &lt;= <span class="str">0.3</span>:  <span class="cm"># accelerate</span>
-    <span class="kw">return</span> <span class="str">"FAST_TRACK"</span>
-  <span class="kw">return</span> <span class="str">"REQUIRED"</span>
+            <span class="kw">def</span>
+            <span class="fn">compute_gap_score</span>(skill): gap =
+            skill.required - skill.current <span class="kw">if</span> gap
+            &lt;= <span class="str">0.1</span>:
+            <span class="cm"># within 10% → skip</span>
+            <span class="kw">return</span> <span class="str">"SKIP"</span>
+            <span class="kw">elif</span> gap &lt;=
+            <span class="str">0.3</span>: <span class="cm"># accelerate</span>
+            <span class="kw">return</span>
+            <span class="str">"FAST_TRACK"</span>
+            <span class="kw">return</span> <span class="str">"REQUIRED"</span>
           </div>
         </div>
         <div class="algo-card reveal reveal-delay-2">
           <h3>Graph-Based Pathway Optimizer</h3>
           <ul>
-            <li>Dijkstra's algorithm finds minimum-time path to full competency</li>
-            <li>Edge weights = estimated learning time × difficulty multiplier</li>
-            <li>Nodes filtered by gap score before traversal (skip ≤ 10% delta)</li>
-            <li>Cross-domain generalization: same algorithm for tech, ops, and soft-skill roles</li>
-            <li>Reasoning trace generated at each decision node for transparency</li>
+            <li>
+              Dijkstra's algorithm finds minimum-time path to full competency
+            </li>
+            <li>
+              Edge weights = estimated learning time × difficulty multiplier
+            </li>
+            <li>
+              Nodes filtered by gap score before traversal (skip ≤ 10% delta)
+            </li>
+            <li>
+              Cross-domain generalization: same algorithm for tech, ops, and
+              soft-skill roles
+            </li>
+            <li>
+              Reasoning trace generated at each decision node for transparency
+            </li>
           </ul>
           <div class="code-block">
-<span class="cm"># Adaptive path with reasoning</span>
-<span class="kw">for</span> module <span class="kw">in</span> topo_sort(skill_graph):
-  score = <span class="fn">compute_gap_score</span>(module)
-  path.append({
-    <span class="str">"module"</span>: module.name,
-    <span class="str">"action"</span>: score,
-    <span class="str">"reason"</span>: <span class="fn">llm_explain</span>(module, score)
-  })
+            <span class="cm"># Adaptive path with reasoning</span>
+            <span class="kw">for</span> module
+            <span class="kw">in</span> topo_sort(skill_graph): score =
+            <span class="fn">compute_gap_score</span>(module) path.append({
+            <span class="str">"module"</span>: module.name,
+            <span class="str">"action"</span>: score,
+            <span class="str">"reason"</span>:
+            <span class="fn">llm_explain</span>(module, score) })
           </div>
         </div>
       </div>
@@ -428,8 +594,13 @@
   <!-- ─── CTA ─── -->
   <section class="cta-section">
     <div class="orb-cta"></div>
-    <h2 class="reveal">Ready to build<br><span style="color:var(--lime)">smarter</span> onboarding?</h2>
-    <p class="reveal">Open source. Fully documented. Judges-ready with one Docker command.</p>
+    <h2 class="reveal">
+      Ready to build<br /><span style="color: var(--lime)">smarter</span>
+      onboarding?
+    </h2>
+    <p class="reveal">
+      Open source. Fully documented. Judges-ready with one Docker command.
+    </p>
     <div class="cta-badges reveal">
       <span class="badge">🏆 Hackathon 2025</span>
       <span class="badge">📋 O*NET Dataset</span>
@@ -438,8 +609,8 @@
       <span class="badge">⚡ Zero Hallucinations</span>
     </div>
     <div class="cta-btns reveal">
-      <button class="btn-primary" style="font-size:1.1rem;padding:1.1rem 2.5rem">Launch App ↗</button>
-      <a href="https://github.com" class="btn-github">⭐ GitHub Repo</a>
+<a href="demo.html" class="btn-primary" style="font-size:1.1rem;padding:1.1rem 2.5rem">Launch App ↗</a>
+      <a href="https://github.com/Hack-Break/CodeForge-Hackathon" class="btn-github">⭐ GitHub Repo</a>
     </div>
   </section>
 
@@ -447,7 +618,9 @@
   <footer>
     <div class="logo">NeuralPath</div>
     <p>Built for the AI-Adaptive Onboarding Engine Hackathon 2025</p>
-    <p style="font-size:0.72rem;color:rgba(245,242,235,0.2)">Powered by Claude · O*NET · FastAPI · React</p>
+    <p style="font-size: 0.72rem; color: rgba(245, 242, 235, 0.2)">
+      Powered by Claude · O*NET · FastAPI · React
+    </p>
   </footer>
 
   <!-- ─── Scripts ─── -->
@@ -456,6 +629,6 @@
   <script src="src/js/skillBars.js"></script>
   <script src="src/js/counters.js"></script>
   <script src="src/js/smoothScroll.js"></script>
-
 </body>
+
 </html>

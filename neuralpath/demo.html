@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuralPath — Try Demo</title>
+  <link rel="stylesheet" href="src/css/variables.css" />
+  <link rel="stylesheet" href="src/css/base.css" />
+  <link rel="stylesheet" href="src/css/cursor.css" />
+  <link rel="stylesheet" href="src/css/demo.css" />
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="demo-nav">
+    <a href="index.html" class="demo-nav__logo">NeuralPath</a>
+    <span class="demo-nav__badge">AI Demo</span>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main class="demo-main">
+
+    <!-- Step 1 & 2: Upload panels -->
+    <section class="demo-upload" id="upload-section">
+      <div class="demo-upload__header">
+        <h1 class="demo-upload__title">Analyse Your Gap</h1>
+        <p class="demo-upload__sub">Upload your resume and paste the job description. Our AI builds your personalised learning pathway in seconds.</p>
+      </div>
+
+      <div class="demo-upload__grid">
+
+        <!-- Resume -->
+        <div class="upload-zone" id="resume-zone">
+          <input type="file" id="resume-input" accept=".pdf,.docx,.txt" hidden />
+          <div class="upload-zone__icon">📄</div>
+          <h3 class="upload-zone__title">Resume Upload</h3>
+          <p class="upload-zone__desc">Drag & drop your resume here or click to browse your files.</p>
+          <div class="upload-zone__tags">
+            <span class="tag">PDF</span>
+            <span class="tag">DOCX</span>
+            <span class="tag">TXT</span>
+          </div>
+          <div class="upload-zone__file" id="resume-file" hidden>
+            <span class="upload-zone__file-icon">✓</span>
+            <span id="resume-filename"></span>
+          </div>
+        </div>
+
+        <!-- Job Description -->
+        <div class="upload-zone jd-zone" id="jd-zone">
+          <div class="upload-zone__icon">💼</div>
+          <h3 class="upload-zone__title">Job Description</h3>
+          <p class="upload-zone__desc">Paste the JD text below or upload the document.</p>
+          <textarea
+            id="jd-text"
+            class="jd-textarea"
+            placeholder="Paste job description here…&#10;&#10;e.g. We are looking for a Senior Full-Stack Engineer with experience in React, Node.js, AWS…"
+          ></textarea>
+          <div class="upload-zone__tags">
+            <span class="tag">PDF</span>
+            <span class="tag">DOCX</span>
+            <span class="tag">TEXT</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Analyse button -->
+      <button class="analyse-btn" id="analyse-btn" disabled>
+        <span class="analyse-btn__text">Generate Pathway</span>
+        <span class="analyse-btn__icon">→</span>
+      </button>
+      <p class="demo-hint" id="demo-hint">Upload your resume and add a job description to begin.</p>
+    </section>
+
+    <!-- ── Loading state ── -->
+    <section class="demo-loading" id="loading-section" hidden>
+      <div class="loading-orb"></div>
+      <p class="loading-label" id="loading-label">Reading your resume…</p>
+      <div class="loading-steps">
+        <span class="loading-step" id="ls-1">Parsing resume</span>
+        <span class="loading-step" id="ls-2">Analysing job requirements</span>
+        <span class="loading-step" id="ls-3">Detecting skill gaps</span>
+        <span class="loading-step" id="ls-4">Building pathway</span>
+      </div>
+    </section>
+
+    <!-- ── Results ── -->
+    <section class="demo-results" id="results-section" hidden>
+      <div class="results-header">
+        <div>
+          <h2 class="results-title" id="results-title">Generated Pathway</h2>
+          <p class="results-meta" id="results-meta"></p>
+        </div>
+        <button class="reset-btn" id="reset-btn">← Start Over</button>
+      </div>
+
+      <div class="pathway-list" id="pathway-list">
+        <!-- populated by demo.js -->
+      </div>
+
+      <div class="results-summary" id="results-summary" hidden>
+        <div class="summary-card">
+          <span class="summary-card__num" id="sum-total">0</span>
+          <span class="summary-card__label">Total Hours</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-card__num" id="sum-modules">0</span>
+          <span class="summary-card__label">Modules</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-card__num" id="sum-skipped">0</span>
+          <span class="summary-card__label">Skipped</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-card__num" id="sum-critical">0</span>
+          <span class="summary-card__label">Critical Gaps</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Error state ── -->
+    <div class="demo-error" id="error-box" hidden>
+      <span class="demo-error__icon">⚠</span>
+      <p id="error-msg">Something went wrong. Please try again.</p>
+      <button class="reset-btn" id="error-reset-btn">Try Again</button>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <!-- pdf.js for PDF text extraction -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- mammoth.js for DOCX extraction -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="src/js/cursor.js"></script>
+  <script src="src/js/demo.js"></script>
+</body>
+</html>
