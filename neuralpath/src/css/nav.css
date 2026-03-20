@@ -1,0 +1,59 @@
+/* ─── Navigation ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3rem;
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--lime);
+}
+.nav-logo span {
+  color: var(--paper);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(245, 242, 235, 0.5);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--lime);
+}
+
+.nav-cta {
+  padding: 0.6rem 1.4rem;
+  background: var(--lime);
+  color: var(--ink);
+  border: none;
+  border-radius: 100px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nav-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(200, 245, 60, 0.4);
+}

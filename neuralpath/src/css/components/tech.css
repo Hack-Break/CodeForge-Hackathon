@@ -1,0 +1,38 @@
+/* ─── Tech Stack ─── */
+.tech-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1px;
+  margin-top: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tech-item {
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.3s;
+  cursor: none;
+}
+.tech-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.tech-item .t-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.tech-item .t-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.tech-item .t-desc {
+  font-size: 0.75rem;
+  color: rgba(245, 242, 235, 0.35);
+  line-height: 1.4;
+}

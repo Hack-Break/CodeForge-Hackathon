@@ -1,0 +1,222 @@
+/* ─── Hero Section ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3D Perspective Grid Floor */
+.grid-floor {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  width: 200%;
+  height: 70%;
+  background-image:
+    linear-gradient(rgba(91, 79, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 79, 255, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: translateX(-50%) perspective(600px) rotateX(65deg);
+  transform-origin: top center;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 70%, transparent 100%);
+}
+
+/* Floating Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+.orb-1 {
+  width: 600px; height: 600px;
+  top: -150px; right: -100px;
+  background: radial-gradient(circle, rgba(91, 79, 255, 0.4), transparent 70%);
+  animation: float1 8s ease-in-out infinite;
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  bottom: 0; left: -100px;
+  background: radial-gradient(circle, rgba(58, 245, 216, 0.25), transparent 70%);
+  animation: float2 10s ease-in-out infinite;
+}
+.orb-3 {
+  width: 300px; height: 300px;
+  top: 30%; left: 40%;
+  background: radial-gradient(circle, rgba(255, 92, 58, 0.2), transparent 70%);
+  animation: float3 7s ease-in-out infinite;
+}
+
+/* Hero Tag */
+.hero-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--lime);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(200, 245, 60, 0.3);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  background: rgba(200, 245, 60, 0.05);
+}
+.hero-tag::before {
+  content: '◈ ';
+}
+
+/* Hero Heading */
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.hero h1 .accent {
+  color: var(--lime);
+  display: inline-block;
+}
+.hero h1 .stroke {
+  -webkit-text-stroke: 2px var(--paper);
+  color: transparent;
+}
+
+/* Hero Description */
+.hero-desc {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(245, 242, 235, 0.55);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Stats */
+.hero-stats {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  display: flex;
+  gap: 3rem;
+  z-index: 2;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--lime);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: rgba(245, 242, 235, 0.4);
+  letter-spacing: 0.05em;
+}
+
+/* Floating Hero Cards */
+.hero-cards {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  height: 480px;
+}
+.hcard {
+  position: absolute;
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+.hcard-1 {
+  width: 280px;
+  background: rgba(91, 79, 255, 0.2);
+  top: 0; left: 70px;
+  transform: rotate(3deg);
+  animation: card-float-1 6s ease-in-out infinite;
+}
+.hcard-2 {
+  width: 260px;
+  background: rgba(10, 10, 15, 0.8);
+  top: 140px; left: 0;
+  transform: rotate(-4deg);
+  animation: card-float-2 7s ease-in-out infinite;
+  border-color: rgba(200, 245, 60, 0.2);
+}
+.hcard-3 {
+  width: 240px;
+  background: rgba(58, 245, 216, 0.1);
+  top: 280px; left: 90px;
+  transform: rotate(2deg);
+  animation: card-float-3 8s ease-in-out infinite;
+  border-color: rgba(58, 245, 216, 0.2);
+}
+
+.hcard-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.hcard-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.skill-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  border-radius: 100px;
+}
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.skill-name {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.skill-pct {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,65 @@
+/* ─── Algorithm Section ─── */
+.algo-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.algo-inner {
+  max-width: 900px;
+}
+
+.algo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.algo-card {
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+}
+.algo-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.algo-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.algo-card li {
+  font-size: 0.88rem;
+  color: rgba(245, 242, 235, 0.6);
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.5;
+}
+.algo-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-size: 0.8rem;
+}
+
+/* Code Block */
+.code-block {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: rgba(245, 242, 235, 0.7);
+  line-height: 1.8;
+  margin-top: 1.2rem;
+  overflow-x: auto;
+}
+.code-block .kw  { color: #a99fff; }
+.code-block .fn  { color: var(--lime); }
+.code-block .str { color: #ff7b5f; }
+.code-block .cm  { color: rgba(255, 255, 255, 0.25); }

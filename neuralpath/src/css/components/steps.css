@@ -1,0 +1,70 @@
+/* ─── How It Works — Steps ─── */
+.steps-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 4rem;
+}
+
+.step {
+  position: relative;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+.step:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(200, 245, 60, 0.2);
+}
+.step::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 0% 0%, rgba(91, 79, 255, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.step:hover::before {
+  opacity: 1;
+}
+
+.step-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  top: 1rem; right: 2rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.step-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.step-icon.violet { background: rgba(91, 79, 255, 0.2); }
+.step-icon.lime   { background: rgba(200, 245, 60, 0.15); }
+.step-icon.coral  { background: rgba(255, 92, 58, 0.15); }
+.step-icon.sky    { background: rgba(58, 245, 216, 0.15); }
+
+.step h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+.step p {
+  font-size: 0.92rem;
+  color: rgba(245, 242, 235, 0.5);
+  line-height: 1.7;
+  max-width: 320px;
+}

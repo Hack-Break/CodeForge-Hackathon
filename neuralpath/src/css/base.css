@@ -1,0 +1,40 @@
+/* ─── Base & Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  background: var(--ink);
+  color: var(--paper);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+section {
+  padding: 7rem 3rem;
+}
+
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 1rem;
+}
+
+.section-h {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}

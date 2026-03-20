@@ -1,0 +1,42 @@
+/* ─── Responsive Breakpoints ─── */
+@media (max-width: 900px) {
+  .hero-cards {
+    display: none;
+  }
+
+  .steps-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .algo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section,
+  .hero {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

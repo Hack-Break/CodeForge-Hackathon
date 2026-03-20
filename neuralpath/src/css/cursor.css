@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════════════════
+   CURSOR.CSS — Custom Cursor · Trail · Ripple · Label
+   Uses your --lime brand colour throughout.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Hide default cursor everywhere ── */
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+/* ── Dot ─────────────────────────────────────────────────────
+   Snaps instantly to mouse. mix-blend-mode inverts beneath.  */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--lime);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition:
+    width      .15s ease,
+    height     .15s ease,
+    background .2s  ease,
+    opacity    .2s  ease,
+    transform  .15s ease;
+  mix-blend-mode: difference;
+  will-change: left, top;
+}
+
+/* ── Ring ────────────────────────────────────────────────────
+   Follows with elastic lag via JS requestAnimationFrame.     */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--lime);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  transition:
+    width        .35s cubic-bezier(0.23, 1, 0.32, 1),
+    height       .35s cubic-bezier(0.23, 1, 0.32, 1),
+    border-color .25s ease,
+    border-width .25s ease,
+    opacity      .2s  ease;
+  will-change: left, top;
+}
+
+/* ── Trail Particle ──────────────────────────────────────────
+   Short-lived dots that follow cursor movement and fade out. */
+.cursor-trail {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99990;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  animation: trailFade 0.6s ease forwards;
+}
+
+@keyframes trailFade {
+  0%   { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0;   transform: translate(-50%, -50%) scale(0); }
+}
+
+/* ── Click Ripple ────────────────────────────────────────────
+   Expands outward from click position then fades out.        */
+.cursor-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99985;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleOut 0.55s cubic-bezier(0, 0.6, 0.4, 1) forwards;
+}
+
+@keyframes rippleOut {
+  0%   { transform: translate(-50%, -50%) scale(0); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0;   }
+}
+
+/* ── Hover Label ─────────────────────────────────────────────
+   Small badge that appears beside cursor on interactive els. */
+#cursor-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--lime);
+  color: #000;
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  padding: 3px 7px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 99997;
+  transform: translate(16px, -50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+#cursor-label.visible {
+  opacity: 1;
+}
+
+/* ── Hide on touch / mobile devices ─────────────────────────
+   No custom cursor on screens without a real pointer.        */
+@media (hover: none) {
+  .cursor,
+  .cursor-ring,
+  #cursor-label {
+    display: none !important;
+  }
+}

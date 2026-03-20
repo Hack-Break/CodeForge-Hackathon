@@ -1,0 +1,36 @@
+/* ─── Metrics ─── */
+.metrics-section {
+  background: rgba(91, 79, 255, 0.06);
+  border-top: 1px solid rgba(91, 79, 255, 0.1);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 4rem;
+}
+
+.metric-card {
+  padding: 2.5rem 2rem;
+  background: rgba(10, 10, 15, 0.6);
+  text-align: center;
+}
+
+.metric-big {
+  font-family: 'Syne', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.metric-big.lime   { color: var(--lime); }
+.metric-big.violet { color: #a99fff; }
+.metric-big.coral  { color: #ff7b5f; }
+.metric-big.sky    { color: var(--sky); }
+
+.metric-label {
+  font-size: 0.82rem;
+  color: rgba(245, 242, 235, 0.4);
+  line-height: 1.4;
+}
